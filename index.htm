@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahush Logistics Pvt. Ltd. | One-Stop Logistics Solution</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom colors based on the logo */
+        :root {
+            --color-primary-dark: #0F2C59; /* Dark Blue */
+            --color-secondary-teal: #70A3A9; /* Light Teal */
+            --color-light: #FFFFFF;
+            --color-text-dark: #333333;
+        }
+
+        .bg-primary-dark { background-color: var(--color-primary-dark); }
+        .text-primary-dark { color: var(--color-primary-dark); }
+        .bg-secondary-teal { background-color: var(--color-secondary-teal); }
+        .text-secondary-teal { color: var(--color-secondary-teal); }
+        .border-secondary-teal { border-color: var(--color-secondary-teal); }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-dark);
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom SVG logo based on the provided image geometry */
+        .nahush-logo-svg {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .nahush-logo-svg .part1 { fill: var(--color-secondary-teal); }
+        .nahush-logo-svg .part2 { fill: var(--color-light); }
+
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-primary-dark shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Branding -->
+                <a href="#hero" class="flex-shrink-0 flex items-center group">
+                    <svg class="nahush-logo-svg mr-2" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                        <!-- Dark Teal Arrow/N Part 1 (Left side) -->
+                        <polygon class="part1" points="0,0 50,0 50,20 20,20 20,80 50,80 50,100 0,100" />
+                        <!-- White Arrow/N Part 2 (Right side - V shape) -->
+                        <polygon class="part2" points="55,0 100,0 100,100 55,100 55,80 80,50 55,20" />
+                    </svg>
+                    <span class="text-white text-xl font-extrabold tracking-wider">NAHUSH</span>
+                    <span class="text-secondary-teal text-sm font-semibold ml-1 hidden sm:inline">LOGISTIC PVT. LTD.</span>
+                </a>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">About</a>
+                        <a href="#services" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Services</a>
+                        <a href="#clients" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Clients</a>
+                        <a href="#contact" class="text-secondary-teal bg-white hover:bg-secondary-teal hover:text-white px-3 py-2 rounded-full text-sm font-bold transition duration-300 shadow-md">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-secondary-teal inline-flex items-center justify-center p-2 rounded-md text-primary-dark hover:text-white hover:bg-secondary-teal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-dark focus:ring-white transition duration-150" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:bg-secondary-teal hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">About</a>
+                <a href="#services" class="text-gray-300 hover:bg-secondary-teal hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">Services</a>
+                <a href="#clients" class="text-gray-300 hover:bg-secondary-teal hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-150">Clients</a>
+                <a href="#contact" class="text-white bg-secondary-teal hover:bg-primary-dark block px-3 py-2 rounded-md text-base font-bold transition duration-150 mt-2">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero" class="bg-primary-dark text-white pt-20 pb-32 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                            <span class="block">Your Supply Chain,</span>
+                            <span class="block text-secondary-teal">Our Global Expertise.</span>
+                        </h1>
+                        <p class="mt-3 text-xl text-gray-300 max-w-md">
+                            With over 12 years of experience, Nahush Logistics is your one-stop solution for Custom Management, Freight Forwarding, Transportation, and Warehousing needs.
+                        </p>
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                            <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-primary-dark bg-secondary-teal hover:bg-white hover:shadow-xl transition duration-300 transform hover:scale-105 shadow-2xl">
+                                Explore Services
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-secondary-teal text-base font-bold rounded-full text-white hover:bg-secondary-teal/20 transition duration-300">
+                                Contact Sales <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image/Illustration Placeholder -->
+                    <div class="mt-12 lg:mt-0 lg:col-span-6">
+                        <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-secondary-teal/10 border-4 border-secondary-teal/50">
+                            <!-- Placeholder for a graphic of ships/trucks/planes -->
+                            <div class="p-8 text-center h-full flex flex-col justify-center items-center">
+                                <i data-lucide="truck" class="w-20 h-20 text-secondary-teal opacity-70 mb-4"></i>
+                                <i data-lucide="ship" class="w-16 h-16 text-secondary-teal opacity-70 mb-4"></i>
+                                <i data-lucide="plane" class="w-12 h-12 text-secondary-teal opacity-70"></i>
+                                <p class="mt-4 text-xl font-semibold text-white/80">Delivering seamless global and domestic solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Abstract background shape -->
+            <div class="absolute inset-x-0 bottom-0">
+                <svg class="w-full h-auto text-gray-50" viewBox="0 0 1440 100" preserveAspectRatio="none" fill="currentColor">
+                    <path d="M0,40 C240,0 480,0 720,40 C960,80 1200,80 1440,40 L1440,100 L0,100 Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About/Mission/Vision Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-secondary-teal uppercase tracking-widest font-bold text-sm">Our Foundation</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-primary-dark">Commitment to Excellence</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- About Summary -->
+                    <div class="md:col-span-3 lg:col-span-1 p-8 bg-white shadow-xl rounded-xl transition duration-300 hover:shadow-2xl border-t-4 border-secondary-teal">
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4 flex items-center">
+                            <i data-lucide="briefcase" class="w-6 h-6 mr-3 text-secondary-teal"></i>
+                            Company Overview
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Nahush Logistics Pvt. Ltd. is a one-stop solution for all logistics needs, representing various sectors such as Custom Management, Freight Forwarding, Transportation, Warehousing, and Other Customized Services. We have over 12 years of experience and a committed team focused on providing tailor-made, cost-effective, and compliant solutions.
+                        </p>
+                    </div>
+                    
+                    <!-- Mission -->
+                    <div class="p-8 bg-primary-dark text-white rounded-xl shadow-xl border-t-4 border-secondary-teal">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i data-lucide="target" class="w-6 h-6 mr-3 text-secondary-teal"></i>
+                            Our Mission
+                        </h3>
+                        <p class="leading-relaxed text-gray-200">
+                            To deliver fast, compliant, and cost-effective logistics solutions with a customer-first approach, ensuring seamless operations across global and domestic supply chains.
+                        </p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="p-8 bg-white shadow-xl rounded-xl transition duration-300 hover:shadow-2xl border-t-4 border-secondary-teal">
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4 flex items-center">
+                            <i data-lucide="eye" class="w-6 h-6 mr-3 text-secondary-teal"></i>
+                            Our Vision
+                        </h3>
+                        <p class="leading-relaxed text-gray-600">
+                            To become one of India’s most trusted and technology-driven logistics partners, recognized for reliability, integrity, and efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-secondary-teal uppercase tracking-widest font-bold text-sm">What We Offer</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-primary-dark">Comprehensive Logistics Solutions</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card: Custom Management -->
+                    <div class="group bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-secondary-teal/10 border-b-4 border-secondary-teal/0 hover:border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-white mb-4 shadow-md group-hover:bg-primary-dark transition duration-300">
+                            <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">A. Custom Management</h3>
+                        <ul class="text-gray-600 space-y-2 list-none text-sm">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Pre and Post shipments guidance.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Documentation Procedures and handling.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Customs EDI registration & Post shipment formalities.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Container consolidation & Duty calculations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card: Freight Forwarding -->
+                    <div class="group bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-secondary-teal/10 border-b-4 border-secondary-teal/0 hover:border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-white mb-4 shadow-md group-hover:bg-primary-dark transition duration-300">
+                            <i data-lucide="plane" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">B. Freight Forwarding</h3>
+                        <p class="text-gray-600 text-sm">
+                            We cater to all import and export needs with competitive freight rates, vast network access, optimum transit times, and complete freight solutions for global deadlines, covering ocean and air freight services.
+                        </p>
+                    </div>
+
+                    <!-- Service Card: Transportation -->
+                    <div class="group bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-secondary-teal/10 border-b-4 border-secondary-teal/0 hover:border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-white mb-4 shadow-md group-hover:bg-primary-dark transition duration-300">
+                            <i data-lucide="truck" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">C. Transportation</h3>
+                        <p class="text-gray-600 text-sm">
+                            Offering safe and timely transportation services for import and export cargo, including door-to-door service through multimodal connectivity, ensuring seamless inland logistics.
+                        </p>
+                    </div>
+
+                    <!-- Service Card: Warehousing -->
+                    <div class="group bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-secondary-teal/10 border-b-4 border-secondary-teal/0 hover:border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-white mb-4 shadow-md group-hover:bg-primary-dark transition duration-300">
+                            <i data-lucide="warehouse" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">D. Warehousing</h3>
+                        <ul class="text-gray-600 space-y-2 list-none text-sm">
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Short/long term storage solutions.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Inventory Management.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Stuffing/De-stuffing services.</li>
+                            <li class="flex items-start"><i data-lucide="check-circle" class="w-4 h-4 mr-2 mt-1 text-secondary-teal flex-shrink-0"></i>Bonded Warehouses availability.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card: Customized Services -->
+                    <div class="group bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:bg-secondary-teal/10 border-b-4 border-secondary-teal/0 hover:border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-white mb-4 shadow-md group-hover:bg-primary-dark transition duration-300">
+                            <i data-lucide="wrench" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">E. Other Customized Services</h3>
+                        <p class="text-gray-600 text-sm">
+                            Specialized services including Project cargo handling, ODC cargo, CDSCO NOC, DGFT, insurance, consultancy, packing, palletization, and fumigation to meet unique business requirements.
+                        </p>
+                    </div>
+                    
+                    <!-- Industries Served -->
+                    <div class="bg-primary-dark p-6 rounded-xl shadow-xl border-b-4 border-secondary-teal">
+                        <div class="flex items-center justify-center w-12 h-12 bg-secondary-teal rounded-full text-primary-dark mb-4 shadow-md">
+                            <i data-lucide="factory" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Industries We Serve</h3>
+                        <p class="text-secondary-teal mb-3 text-sm font-semibold">We handle clearance for a diverse range of products, including:</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <span class="text-gray-200 text-xs py-1 px-3 bg-white/10 rounded-full">Pharmaceutical & Chemicals</span>
+                            <span class="text-gray-200 text-xs py-1 px-3 bg-white/10 rounded-full">Food and Nutraceuticals</span>
+                            <span class="text-gray-200 text-xs py-1 px-3 bg-white/10 rounded-full">Textile Articles</span>
+                            <span class="text-gray-200 text-xs py-1 px-3 bg-white/10 rounded-full">Engineering & Auto Equipments</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Clientele Section (Minimal Display) -->
+        <section id="clients" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-secondary-teal uppercase tracking-widest font-bold text-sm">Trusted By</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-primary-dark">Our Valued Clientele</h2>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-xl">
+                    <p class="text-center text-gray-700 text-lg mb-6">Serving a wide range of industry leaders, including:</p>
+                    
+                    <!-- Client Logos - showing a select few for design purposes -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=ACCUMETRIC" alt="Client Logo 1" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=ALKALOIDS" alt="Client Logo 2" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=BLACKROSE" alt="Client Logo 3" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=BRENNTAG" alt="Client Logo 4" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=CRODA" alt="Client Logo 5" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0 hidden lg:block">
+                        <img src="https://placehold.co/150x50/F2F2F2/70A3A9?text=GUJARAT+P." alt="Client Logo 6" class="h-8 md:h-10 opacity-75 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0 hidden lg:block">
+                    </div>
+
+                    <p class="mt-8 text-center text-primary-dark/70 font-medium">And many more global partners...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-primary-dark py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-secondary-teal uppercase tracking-widest font-bold text-sm">Connect With Us</span>
+                    <h2 class="mt-2 text-4xl font-extrabold text-white">Get Your Seamless Logistics Solution</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Contact Details -->
+                    <div class="space-y-8 text-white lg:col-span-1">
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-secondary-teal flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Our Office</h4>
+                                <p class="text-gray-300">
+                                    Nahush Logistics Pvt. Ltd.<br>
+                                    Ground Floor, Shop No G-15, Sacred World<br>
+                                    Wanawadi, Pune- 411040, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-secondary-teal flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Phone & Sales</h4>
+                                <p class="text-gray-300">
+                                    <a href="tel:+917972060379" class="hover:text-secondary-teal transition duration-150">+91 7972060379</a><br>
+                                    <a href="tel:+919689099037" class="hover:text-secondary-teal transition duration-150">+91 9689099037</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="mail" class="w-6 h-6 text-secondary-teal flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Email</h4>
+                                <p class="text-gray-300">
+                                    <a href="mailto:doc.pune@nahushlogistics.com" class="hover:text-secondary-teal transition duration-150">doc.pune@nahushlogistics.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Placeholder -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl lg:col-span-2">
+                        <form action="#" method="POST" class="space-y-6">
+                            <h3 class="text-2xl font-bold text-primary-dark">Request a Consultation</h3>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="name" id="name" autocomplete="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-secondary-teal focus:border-secondary-teal sm:text-sm" placeholder="Your Name">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                                    <input type="email" name="email" id="email" autocomplete="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-secondary-teal focus:border-secondary-teal sm:text-sm" placeholder="you@company.com">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                    <input type="text" name="phone" id="phone" autocomplete="tel" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-secondary-teal focus:border-secondary-teal sm:text-sm" placeholder="+91 XXXX XXXX XX">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">How can we help you?</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-secondary-teal focus:border-secondary-teal sm:text-sm" placeholder="Tell us about your logistics challenge..."></textarea>
+                            </div>
+                            <div class="flex justify-end">
+                                <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent rounded-full shadow-sm text-base font-bold text-white bg-secondary-teal hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-teal transition duration-300 transform hover:scale-[1.02]">
+                                    Send Inquiry
+                                </button>
+                            </div>
+                            <p class="text-xs text-center text-gray-500">Note: This is a static demo form. No data will be submitted.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="#" class="flex items-center group mb-4">
+                        <svg class="nahush-logo-svg mr-2 w-6 h-6" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                            <polygon class="part1" points="0,0 50,0 50,20 20,20 20,80 50,80 50,100 0,100" fill="currentColor" />
+                            <polygon class="part2" points="55,0 100,0 100,100 55,100 55,80 80,50 55,20" fill="white" />
+                        </svg>
+                        <span class="text-white text-xl font-extrabold">NAHUSH</span>
+                    </a>
+                    <p class="text-sm text-gray-400">Delivering fast, compliant, and cost-effective logistics solutions with a customer-first approach.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-secondary-teal font-semibold mb-4 uppercase text-sm">Navigation</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-150">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-150">Our Services</a></li>
+                        <li><a href="#clients" class="text-gray-400 hover:text-white transition duration-150">Client List</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-150">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Core Services -->
+                <div>
+                    <h5 class="text-secondary-teal font-semibold mb-4 uppercase text-sm">Key Offerings</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="text-gray-400">Custom Management</span></li>
+                        <li><span class="text-gray-400">Freight Forwarding (Air & Ocean)</span></li>
+                        <li><span class="text-gray-400">Transportation & Warehousing</span></li>
+                        <li><span class="text-gray-400">Project Cargo Handling</span></li>
+                    </ul>
+                </div>
+
+                <!-- Registrations/Compliance -->
+                <div>
+                    <h5 class="text-secondary-teal font-semibold mb-4 uppercase text-sm">Registrations</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-gray-400">CHA Regn. No: 2744</span></li>
+                        <li><span class="text-gray-400">FFI Membership: MUM/ASSO/1168</span></li>
+                        <li><span class="text-gray-400">UDYAM Registration: UDYAM-MH-33-0106850</span></li>
+                        <li><span class="text-gray-400">Mumbai Port Authority ID: C 037</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p class="text-sm text-gray-500">&copy; 2025 Nahush Logistics Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden', isExpanded);
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuButton = document.getElementById('mobile-menu-button');
+                
+                menuButton.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple form submission prevention for demo
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will be in touch soon.');
+                // In a real application, you would send the data to a server here.
+                // console.log('Form data:', Object.fromEntries(new FormData(e.target)));
+            });
+        }
+
+        // Simple custom alert function (replacing default alert)
+        function alert(message) {
+            const container = document.createElement('div');
+            container.className = 'fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center p-4';
+            container.innerHTML = `
+                <div class="bg-white p-6 rounded-lg shadow-2xl max-w-sm w-full transform transition-all scale-100 duration-300">
+                    <h3 class="text-xl font-bold text-primary-dark mb-3 flex items-center"><i data-lucide="info" class="w-6 h-6 mr-2 text-secondary-teal"></i> Inquiry Received</h3>
+                    <p class="text-gray-700 mb-4">${message}</p>
+                    <div class="flex justify-end">
+                        <button class="bg-secondary-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-primary-dark transition duration-150" onclick="this.closest('.fixed').remove()">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(container);
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

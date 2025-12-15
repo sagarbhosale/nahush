@@ -3,268 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nahush Logistic - Seamless Global Supply Chain Solutions</title>
+    <title>NAHUSH LOGISTIC PVT. LTD. - Your Cargo, Our Commitment</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Custom colors based on the provided image: 
-           Primary Dark: #0B2F5C (Navy)
-           Accent: #73A3A9 (Muted Teal) */
+        /* Custom styles for professional aesthetic */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            scroll-behavior: smooth;
+            background-color: #f7f9fb;
+        }
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            /* Updated: Teal accent */
+            background-color: #0D9488; 
+            border-radius: 9999px;
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .cta-button:hover {
+            /* Updated: Darker Teal for hover */
+            background-color: #0F766E; 
+            transform: scale(1.02);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo/Brand (Updated BG color to Navy #0B2F5C) -->
-                <a href="#hero" class="flex items-center">
-                    <img src="nahush.png" 
-                         alt="Nahush Logistic Logo" 
-                         class="h-10 w-auto rounded shadow-md"
-                         onerror="this.src='https://placehold.co/180x40/0B2F5C/FFFFFF?text=Nahush+Logo+Text';">
-                </a>
-
-                <!-- Desktop Navigation Links (Updated hover color to Teal #73A3A9) -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-[#73A3A9] transition duration-300 font-medium">Services</a>
-                    <a href="#about" class="text-gray-600 hover:text-[#73A3A9] transition duration-300 font-medium">About Us</a>
-                    <a href="#whyus" class="text-gray-600 hover:text-[#73A3A9] transition duration-300 font-medium">Why Choose Us</a>
-                    <a href="#contact" class="text-gray-600 hover:text-[#73A3A9] transition duration-300 font-medium">Contact</a>
-                </div>
-
-                <!-- CTA Button (Updated colors to Teal #73A3A9) -->
-                <div class="hidden md:block">
-                    <a href="#contact" class="px-6 py-2 border-2 border-[#73A3A9] text-[#73A3A9] rounded-full hover:bg-[#73A3A9] hover:text-white transition duration-300 font-semibold shadow-md">
-                        Get a Quote
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button (Hamburger) -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- Logo - Replaced text with image tag pointing to nahush.png -->
+            <div class="flex items-center">
+                <img 
+                    src="nahush.png" 
+                    alt="NAHUSH LOGISTIC PVT. LTD. Logo" 
+                    class="h-8 max-h-full"
+                    onerror="this.onerror=null;this.src='https://placehold.co/150x32/0D9488/FFFFFF?text=NAHUSH+Logo'; this.classList.add('rounded-lg')"
+                >
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#about" class="hover:text-teal-600 transition duration-150">About</a>
+                <a href="#services" class="hover:text-teal-600 transition duration-150">Services</a>
+                <a href="#clients" class="hover:text-teal-600 transition duration-150">Clients</a>
+                <a href="#contact" class="hover:text-teal-600 transition duration-150">Contact</a>
+            </nav>
+            
+            <!-- Desktop CTA Button -->
+            <a href="#contact" class="hidden md:block bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold cta-button">Get a Quote</a>
+            
+            <!-- Mobile Menu Button (Hamburger/Close Icon) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 hover:text-teal-600 focus:outline-none p-1">
+                <!-- Open Icon (Hamburger) -->
+                <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!-- Close Icon (X) -->
+                <svg id="icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu - Hidden by default, toggled by JS -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 py-2">
+            <div class="flex flex-col space-y-2 px-4 pb-2 text-gray-800 font-medium">
+                <!-- Using onclick handlers to close the menu on link click -->
+                <a href="#about" class="block py-2 px-3 hover:bg-teal-50 rounded-lg">About</a>
+                <a href="#services" class="block py-2 px-3 hover:bg-teal-50 rounded-lg">Services</a>
+                <a href="#clients" class="block py-2 px-3 hover:bg-teal-50 rounded-lg">Clients</a>
+                <a href="#contact" class="block py-2 px-3 hover:bg-teal-50 rounded-lg">Contact</a>
+                <!-- CTA Button in Mobile Menu -->
+                <a href="#contact" class="mt-2 bg-teal-600 text-white text-center px-4 py-3 rounded-lg font-semibold cta-button">Get a Quote</a>
             </div>
         </nav>
-
-        <!-- Mobile Menu (Updated background color to Navy #0B2F5C) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#0B2F5C]/95 backdrop-blur-sm shadow-xl transition-all duration-300 ease-in-out">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#73A3A9]/80">Services</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#73A3A9]/80">About Us</a>
-                <a href="#whyus" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#73A3A9]/80">Why Choose Us</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#73A3A9]/80">Contact & Quote</a>
-            </div>
-        </div>
     </header>
 
-    <main>
-        <!-- Hero Section (Updated background to Navy #0B2F5C, accent text to Teal #73A3A9) -->
-        <section id="hero" class="bg-[#0B2F5C] text-white py-20 md:py-32 relative overflow-hidden">
-            <!-- Background Globe/Map Graphic (Placeholder SVG - Color adjusted) -->
-            <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#1a4c84" fill-opacity="1" d="M0,192L80,186.7C160,181,320,171,480,186.7C640,203,800,245,960,245.3C1120,245,1280,203,1360,181.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-            </svg>
-
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
-                    Delivering <span class="text-[#73A3A9]">Tomorrow,</span> Today.
-                </h1>
-                <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8 opacity-90">
-                    Seamless global logistics, freight forwarding, and supply chain solutions.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <!-- CTA 1 (Updated to Teal BG, Navy text) -->
-                    <a href="#contact" class="bg-[#73A3A9] text-[#0B2F5C] font-bold py-3 px-8 rounded-full shadow-xl hover:bg-[#608B91] transition duration-300 transform hover:scale-105">
-                        Start Shipping Now
-                    </a>
-                    <!-- CTA 2 (Text updated to Navy) -->
-                    <a href="javascript:void(0)" onclick="alert('Tracking functionality placeholder.')" class="bg-white text-[#0B2F5C] font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
-                        Track Shipment
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gray-800 text-white pt-16 pb-24 md:pt-24 md:pb-32">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Adjusted font sizes to scale better on mobile screens -->
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-4 tracking-tighter">
+                Your Cargo, Our <span class="text-teal-400">Commitment</span>
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+                Professional and reliable logistics services, specializing in Customs House Agent (CHA) Services, Air & Sea Freight Forwarding, and end-to-end supply chain solutions.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+                <!-- Ensured buttons stack nicely on very small screens -->
+                <a href="#services" class="bg-teal-600 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-teal-700 transition duration-300 cta-button shadow-lg">
+                    Explore Services
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-800 transition duration-300 shadow-lg">
+                    Contact Us
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section (Accent text and border updated to Teal #73A3A9) -->
-        <section id="services" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Core <span class="text-[#73A3A9]">Services</span></h2>
-                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Integrated services to keep your business moving forward.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service Card 1: Air Freight (Updated colors to Teal #73A3A9) -->
-                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-[#73A3A9]">
-                        <img src="https://placehold.co/100x100/73A3A9/FFFFFF/svg?text=✈" class="h-16 w-16 mx-auto mb-4" alt="Air Freight Icon" onerror="this.src='https://placehold.co/64x64/73A3A9/FFFFFF?text=Air'">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Air Freight</h3>
-                        <p class="text-gray-500 text-sm">Fast, reliable, and cost-effective air cargo solutions.</p>
-                    </div>
-
-                    <!-- Service Card 2: Ocean Freight (Updated colors to Teal #73A3A9) -->
-                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-[#73A3A9]">
-                        <img src="https://placehold.co/100x100/73A3A9/FFFFFF/svg?text=🚢" class="h-16 w-16 mx-auto mb-4" alt="Ocean Freight Icon" onerror="this.src='https://placehold.co/64x64/73A3A9/FFFFFF?text=Ocean'">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Ocean Freight</h3>
-                        <p class="text-gray-500 text-sm">FCL and LCL services with worldwide container shipping.</p>
-                    </div>
-
-                    <!-- Service Card 3: Warehousing (Updated colors to Teal #73A3A9) -->
-                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-[#73A3A9]">
-                        <img src="https://placehold.co/100x100/73A3A9/FFFFFF/svg?text=📦" class="h-16 w-16 mx-auto mb-4" alt="Warehousing Icon" onerror="this.src='https://placehold.co/64x64/73A3A9/FFFFFF?text=Warehouse'">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Warehousing & Distribution</h3>
-                        <p class="text-gray-500 text-sm">Secure storage, inventory management, and fast distribution.</p>
-                    </div>
-
-                    <!-- Service Card 4: Customs Clearance (Updated colors to Teal #73A3A9) -->
-                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-[#73A3A9]">
-                        <img src="https://placehold.co/100x100/73A3A9/FFFFFF/svg?text=📋" class="h-16 w-16 mx-auto mb-4" alt="Customs Icon" onerror="this.src='https://placehold.co/64x64/73A3A9/FFFFFF?text=Customs'">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Customs Brokerage</h3>
-                        <p class="text-gray-500 text-sm">Expert clearance services to navigate all trade regulations easily.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section (Accent text updated to Teal #73A3A9) -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Who We <span class="text-[#73A3A9]">Are</span></h2>
-                <p class="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-12">
-                    Nahush Logistic is a trusted leader in global supply chain management. We are committed to operational excellence and client satisfaction, leveraging technology for transparent, reliable, and swift logistics solutions across all major global routes.
-                </p>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section (Updated background to Navy #0B2F5C, accent text and border to Teal #73A3A9) -->
-        <section id="whyus" class="py-20 bg-[#0B2F5C] text-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold mb-12">Why Choose <span class="text-[#73A3A9]">Nahush?</span></h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Cards using a slightly lighter Navy for BG and Teal border for high contrast -->
-                    <div class="p-6 rounded-xl bg-[#1a4c84] border border-[#73A3A9]/50 shadow-lg">
-                        <p class="text-4xl mb-4">💡</p>
-                        <h3 class="text-xl font-semibold mb-2">Efficiency</h3>
-                        <p class="text-sm opacity-80">Streamlined processes reduce costs and transit times.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-[#1a4c84] border border-[#73A3A9]/50 shadow-lg">
-                        <p class="text-4xl mb-4">🔒</p>
-                        <h3 class="text-xl font-semibold mb-2">Reliability</h3>
-                        <p class="text-sm opacity-80">Guaranteed schedules and end-to-end security.</p>
-                    </div>
-                    <div class="p-6 rounded-xl bg-[#1a4c84] border border-[#73A3A9]/50 shadow-lg">
-                        <p class="text-4xl mb-4">🌍</p>
-                        <h3 class="text-xl font-semibold mb-2">Global Reach</h3>
-                        <p class="text-sm opacity-80">Vast network covering all continents and trade lanes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section (Accent text, border, and button updated to Teal #73A3A9) -->
-        <section id="contact" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Request a <span class="text-[#73A3A9]">Quote</span></h2>
-                <p class="text-lg text-gray-600 text-center max-w-xl mx-auto mb-10">
-                    Tell us your needs for an immediate and competitive quote.
-                </p>
-
-                <form class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-4 border-[#73A3A9]">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#73A3A9] focus:border-[#73A3A9] transition duration-150" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#73A3A9] focus:border-[#73A3A9] transition duration-150" placeholder="you@company.com">
-                        </div>
-                    </div>
+    <!-- About Company Section (Responsive grid maintained) -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center section-header mx-auto">About Our Company</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Mission & Vision Card -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-xl">
+                    <!-- Updated: Teal accent color -->
+                    <h3 class="text-2xl font-bold text-teal-600 mb-6">Mission & Vision</h3>
                     <div class="mb-6">
-                        <label for="details" class="block text-sm font-medium text-gray-700 mb-1">Shipment Details</label>
-                        <textarea id="details" name="details" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#73A3A9] focus:border-[#73A3A9] transition duration-150" placeholder="e.g., LCL, Shanghai to Los Angeles, 500kg of electronics"></textarea>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Mission</h4>
+                        <p class="text-gray-600">To deliver fast, compliant, and cost-effective logistics solutions with a customer-first approach, ensuring seamless operations across global and domestic supply chains.</p>
                     </div>
-                    <div class="text-center">
-                        <button type="submit" class="w-full sm:w-auto bg-[#73A3A9] text-white font-bold py-3 px-12 rounded-full shadow-lg hover:bg-[#608B91] transition duration-300 transform hover:scale-[1.02]">
-                            Submit Quote Request
-                        </button>
-                        <p class="text-xs text-gray-500 mt-4">We will contact you within 2 business hours.</p>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Vision</h4>
+                        <p class="text-gray-600">To become one of India's most trusted and technology-driven logistics partners, recognized for reliability, integrity, and efficiency.</p>
                     </div>
+                </div>
+
+                <!-- Experience and Expertise -->
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Nahush Logistics Pvt. Ltd. is a professional and reliable logistics service provider based in India, specializing in **Customs House Agent (CHA) Services, Air & Sea Freight Forwarding, Transportation, Warehousing, and end-to-end supply chain solutions.**
+                    </p>
+                    <!-- Updated: Teal accent colors for box -->
+                    <div class="bg-teal-50 p-6 rounded-xl border-l-4 border-teal-600">
+                        <p class="text-2xl font-extrabold text-teal-700">12+ Years of Industry Experience</p>
+                        <p class="text-gray-700 mt-1">We bring operational excellence, transparency, and speed to every shipment, ensuring your cargo moves smoothly, compliantly, and on time—every time.</p>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Reliable, experienced, and customer-focused logistics partner offering end-to-end solutions under one roof."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Responsive grid maintained) -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center section-header mx-auto">Our Core Services</h2>
+            
+            <!-- Service Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Customs Clearing Service (CHA) -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Customs Clearing (CHA)</h3>
+                    <p class="text-gray-600">Fast, reliable, and fully compliant Customs Clearing Services that simplify complex import-export formalities. Includes Import & Export Clearance, DGFT Licensing, and documentation handling.</p>
+                </div>
+
+                <!-- Card 2: Sea Freight Handling -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.54 2.354a.5.5 0 01.412.023l4.5 1.5a.5.5 0 01.357.514v6.5a.5.5 0 01-.357.472l-4.5 2a.5.5 0 01-.412 0l-4.5-2A.5.5 0 015 11.354v-6.5a.5.5 0 01.357-.472l4.5-1.5a.5.5 0 01.683.082zM5.523 9.774l4.5 2a.5.5 0 00.454 0l4.5-2v-.37l-4.246 1.884a.5.5 0 01-.492 0L5.523 9.404v.37z" clip-rule="evenodd" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sea Freight Handling</h3>
+                    <p class="text-gray-600">Cost-effective and efficient sea freight management. We handle FCL, LCL, port formalities, and customs clearance with strong carrier networks, ensuring full global visibility.</p>
+                </div>
+
+                <!-- Card 3: Air Freight Handling -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.55a.997.997 0 00-1.788 0l-7 14a.993.993 0 00.324 1.017.995.995 0 00.622.146h12a.995.995 0 00.622-.146.993.993 0 00.324-1.017l-7-14z" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Air Freight Handling</h3>
+                    <p class="text-gray-600">Fast, reliable, and secure air cargo solutions for time-critical shipments. End-to-end coordination across airlines, terminals, and customs for quick transit and accurate documentation.</p>
+                </div>
+                
+                <!-- Card 4: Transportation & Door-to-Door -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Transportation & Logistics</h3>
+                    <p class="text-gray-600">Comprehensive cargo transport (Air/Sea/Road) and Door-to-Door Logistics Support, managing freight coordination from origin terminal to final destination.</p>
+                </div>
+
+                <!-- Card 5: Warehousing & SCM -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L11.414 2H6zm5 12a1 1 0 100 2h2a1 1 0 100-2h-2zm-3-4a1 1 0 100 2h.01a1 1 0 100-2H8zm3 0a1 1 0 100 2h2a1 1 0 100-2h-2z" clip-rule="evenodd" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Warehousing & SCM</h3>
+                    <p class="text-gray-600">Integrated Warehousing and end-to-end supply chain solutions to optimize inventory management, reduce costs, and improve logistics efficiency.</p>
+                </div>
+                
+                <!-- Card 6: Port Coordination -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <!-- Updated: Teal icon color -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 8a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Port / CFS Coordination</h3>
+                    <p class="text-gray-600">Expert handling and coordination with port authorities and Container Freight Stations (CFS) to ensure smooth cargo movement and minimized dwell time.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-gray-800 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-gray-700 transition duration-300 cta-button">
+                    Discuss Your Logistics Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section (Responsive grid maintained) -->
+    <section id="why-us" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 section-header">Why Partner With Nahush?</h2>
+                    <p class="text-xl text-gray-700 mb-8">
+                        We are a customer-focused logistics partner offering end-to-end solutions, backed by decades of expertise.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <!-- Updated: Teal icon color -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 flex-shrink-0 mt-1 mr-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-lg font-semibold text-gray-800">Operational Excellence & Speed:</span> <span class="text-gray-600 ml-2">Fast customs clearance and smooth handling.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- Updated: Teal icon color -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 flex-shrink-0 mt-1 mr-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-lg font-semibold text-gray-800">Compliance & Accuracy:</span> <span class="text-gray-600 ml-2">Accurate documentation and compliant procedures.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- Updated: Teal icon color -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 flex-shrink-0 mt-1 mr-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-lg font-semibold text-gray-800">Transparent Communication:</span> <span class="text-gray-600 ml-2">Full visibility and open communication throughout the process.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- Updated: Teal icon color -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 flex-shrink-0 mt-1 mr-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-lg font-semibold text-gray-800">On-Time Delivery:</span> <span class="text-gray-600 ml-2">Ensuring cargo is moved efficiently and delivered on time—every time.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="relative h-96 rounded-xl overflow-hidden shadow-2xl">
+                    <!-- Placeholder Image (Since we cannot host images) -->
+                    <img src="https://placehold.co/800x600/1F2937/FFFFFF?text=Efficient+Logistics" alt="Why Choose Us visual" class="object-cover w-full h-full">
+                    <!-- Updated: Teal overlay color -->
+                    <div class="absolute inset-0 bg-teal-600 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Clientele Section (Responsive grid maintained) -->
+    <section id="clients" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center section-header mx-auto">Our Valued Clientele</h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-4xl mx-auto">
+                We are proud to serve a diverse and growing list of reputable companies, ensuring their supply chain runs smoothly and reliably.
+            </p>
+            
+            <!-- Optimized client grid for small screens (2 columns) up to large screens (6 columns) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-sm font-medium text-gray-700">
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">ACCUMETRIC SILICONES PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">ALKALOIDS PVT LTD.</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">BLACKROSE INDUSTRIES LIMITED</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">COSMOFIX TECHNOVATION PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">GPT PHARMACEUTICALS PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">HARD GLASS INDUSTRIES PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">ITALMATCH CHEMICALS INDIA PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">JIMIT CHEMICALS</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">MAHARASHTRA IMPEX LIMITED</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">SHARP MINT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">SVIZERA LABS PVT LTD</div>
+                <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">VIPUL CHEMICALS PVT LTD</div>
+            </div>
+            
+            <p class="text-gray-500 mt-8 text-sm italic">... and many more trusted partners.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section (Responsive grid maintained) -->
+    <section id="contact" class="py-16 md:py-24 bg-teal-700 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Get In Touch</h2>
+            <p class="text-teal-100 mb-12 text-center max-w-3xl mx-auto">
+                Ready to optimize your logistics operations? Contact us today for fast, compliant, and cost-effective solutions.
+            </p>
+            
+            <!-- Contact details and form side-by-side on desktop, stacked on mobile -->
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto bg-white text-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold mb-4 text-teal-600">Contact Details (Pune Office)</h3>
+                    
+                    <div class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 mr-3 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                        <div>
+                            <p class="font-semibold">Office Address</p>
+                            <address class="not-italic text-gray-600">
+                                Shop No G-15 Ground floor, Sacred World, Jagtap chowk, Wanawadi, Pune-411040
+                            </address>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 mr-3" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.772-1.548a1 1 0 011.06-.54l4.435.74A1 1 0 0118 16.847V17a1 1 0 01-1 1H3a1 1 0 01-1-1v-4zm2 1h12v4H4V4zm-1 9l.001-.01A1 1 0 013 13v3a1 1 0 001 1h12a1 1 0 001-1v-3a1 1 0 012 0v3a3 3 0 01-3 3H3a3 3 0 01-3-3v-3a1 1 0 012 0z" /></svg>
+                        <div>
+                            <p class="font-semibold">Phone</p>
+                            <a href="tel:+917972060379" class="text-gray-600 hover:text-teal-600 transition duration-150">+91 7972060379</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 mr-3" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                        <div>
+                            <p class="font-semibold">Email</p>
+                            <a href="mailto:doc.pune@nahushlogistics.com" class="text-gray-600 hover:text-teal-600 transition duration-150">doc.pune@nahushlogistics.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Contact Form Placeholder -->
+                <form class="space-y-4">
+                    <h3 class="text-2xl font-bold mb-4 text-teal-600">Send Us A Message</h3>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-teal-500 focus:border-teal-500" placeholder="Tell us about your logistics requirement..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-teal-700 transition duration-300 cta-button">
+                        Send Message
+                    </button>
                 </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- Footer (Updated background to Navy #0B2F5C) -->
-    <footer class="bg-[#0B2F5C] py-8 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-lg font-semibold mb-2">Nahush Logistic</p>
-            <p class="text-sm text-gray-400">&copy; 2025 Nahush Logistic. All rights reserved. | Global Supply Chain Experts.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2024 NAHUSH LOGISTIC PVT. LTD. All rights reserved.</p>
+            <p class="mt-2 text-gray-400">Your Cargo, Our Commitment. | Built with operational excellence and integrity.</p>
         </div>
     </footer>
-
-    <!-- JavaScript for Mobile Menu and Custom Alert -->
+    
+    <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = mobileMenu.querySelectorAll('a');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
 
-            // Toggle mobile menu visibility
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+            // Set initial state: Menu hidden, show hamburger icon
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+
+            menuButton.addEventListener('click', () => {
+                 // Toggle menu visibility
+                 const isHidden = mobileMenu.classList.toggle('hidden');
+                 
+                 // Toggle icons based on new visibility state
+                 iconOpen.classList.toggle('hidden', !isHidden);
+                 iconClose.classList.toggle('hidden', isHidden);
             });
-
-            // Close menu when a link is clicked (for single page navigation)
-            navLinks.forEach(link => {
+            
+            // Close menu when a link inside it is clicked
+            mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    // Slight delay to allow smooth scrolling to start before hiding
-                    setTimeout(() => {
-                        mobileMenu.classList.add('hidden');
-                    }, 100); 
+                     // Only close if the menu is currently open
+                     if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         iconOpen.classList.remove('hidden');
+                         iconClose.classList.add('hidden');
+                     }
                 });
             });
         });
-
-        // Custom alert function to replace window.alert (Color updated)
-        function alert(message) {
-            const modalId = 'custom-alert-modal';
-            let modal = document.getElementById(modalId);
-
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.id = modalId;
-                // Use a high z-index to ensure it is visible over other content
-                modal.className = 'fixed inset-0 z-[9999] bg-gray-900 bg-opacity-75 flex items-center justify-center p-4';
-                modal.innerHTML = `
-                    <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all duration-300 scale-100">
-                        <div class="text-xl font-bold mb-4 text-[#0B2F5C]">Notification</div>
-                        <p id="alert-message" class="text-gray-700 mb-6"></p>
-                        <button id="alert-close-button" class="w-full bg-[#73A3A9] text-white py-2 rounded-lg font-semibold hover:bg-[#608B91] transition duration-300">
-                            Close
-                        </button>
-                    </div>
-                `;
-                document.body.appendChild(modal);
-                
-                // Add event listener to close button
-                document.getElementById('alert-close-button').addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                });
-            }
-            
-            // Set the message and show the modal
-            document.getElementById('alert-message').textContent = message;
-            modal.classList.remove('hidden');
-        }
     </script>
+
 </body>
 </html>

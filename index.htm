@@ -3,223 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nahush Logistics - Official Update</title>
+    <title>Nahush Logistic - Global Supply Chain Solutions</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom font and base styling */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc; /* Light background for contrast */
+            background-color: #f7f9fb;
+            margin: 0;
+            padding-top: 80px; /* Space for the fixed header */
         }
-        .section-padding {
-            padding: 4rem 1rem;
+        /* Style the container that holds the SVG - kept exactly as requested */
+        .svg-container {
+            width: 64px; 
+            height: 64px;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(4, 31, 61, 0.7);
+            background-color: #041f3d; /* Dark background color for contrast */
+            padding: 0.5rem; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        @media (min-width: 768px) {
-            .section-padding {
-                padding: 6rem 4rem;
-            }
+        /* Ensure the SVG scales correctly within its container */
+        .svg-container svg {
+            display: block;
+        }
+        /* Make the header sticky */
+        #main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+        /* Hero section specific styling for the truck image placeholder */
+        .hero-background {
+            background-image: url('https://placehold.co/1200x500/041f3d/72b0b4?text=Modern+Logistics+%26+Supply+Chain');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            position: relative;
+        }
+        .overlay {
+            background-color: rgba(4, 31, 61, 0.6); /* Semi-transparent dark overlay */
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2);
         }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#003366', /* Deep Blue for corporate feel */
-                        'secondary-gold': '#ffcc00', /* Gold/Yellow for accent */
-                        'bg-light': '#f7f9fc',
-                        'text-dark': '#333333',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body>
-
-    <!-- Header & Navigation -->
-    <header class="bg-primary-blue shadow-lg sticky top-0 z-50">
+    
+    <!-- Header with Embedded SVG Logo (Kept as is) -->
+    <header id="main-header" class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0">
-                    <!-- Logo and Title combined, added flex for alignment -->
-                    <a href="#" class="flex items-center space-x-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="507" height="597" class="mx-auto block">
-
-            <g>
-             <title>Layer 1</title>
-             <!-- Small shapes (unchanged) -->
-             <path stroke="#000" id="svg_2" d="m-84.08746,254.19481l0.31929,-0.63857l0.85143,0l0.31929,0.63857l-0.31929,0.63857l-0.85143,0l-0.31929,-0.63857z" fill="#fff"/>
-             <path transform="rotate(43.0194 -493.056 -28.4898)" stroke="#000" id="svg_3" d="m-278.03126,-28.48983l-92.1533,-0.63857l-245.74212,0l-92.15327,0.63857l92.15327,0.63857l245.74212,0l92.1533,-0.63857z" fill="#fff"/>
-             <line id="svg_6" y2="40.66635" x2="-270.66622" y1="40.66635" x1="-269.83289" stroke="#000" fill="none"/>
-
-             <!-- Polygon 1: New Teal-like fill, border hidden -->
-             <path id="svg_43" d="m18.5002,10.66638l-0.16688,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83285,-187.66678z" opacity="undefined" stroke="none" fill="#72b0b4"/>
-
-             <!-- Polygon 2: New White-like fill, border hidden -->
-             <path transform="rotate(-180 333.333 336.166)" id="svg_44" d="m176.00007,81.49965l-0.16689,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83284,-187.66678z" opacity="NaN" stroke="none" fill="#fefefc"/>
-            </g>
-        </svg>
-                        <span class="text-3xl font-extrabold text-white tracking-wider">
-                            NAHUSH <span class="text-secondary-gold">LOGISTICS</span>
-                        </span>
-                    </a>
+                
+                <!-- Logo Area (SVG + Text) -->
+                <div class="flex items-center space-x-4">
+                    <div class="svg-container">
+                        <!-- SVG Icon embedded directly as the logo (Kept as is) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 507 597">
+                            <g>
+                                <title>Icon Graphic</title>
+                                <!-- Small shapes (unchanged) -->
+                                <path stroke="#000" id="svg_2" d="m-84.08746,254.19481l0.31929,-0.63857l0.85143,0l0.31929,0.63857l-0.31929,0.63857l-0.85143,0l-0.31929,-0.63857z" fill="#fff"/>
+                                <path transform="rotate(43.0194 -493.056 -28.4898)" stroke="#000" id="svg_3" d="m-278.03126,-28.48983l-92.1533,-0.63857l-245.74212,0l-92.15327,0.63857l92.15327,0.63857l245.74212,0l92.1533,-0.63857z" fill="#fff"/>
+                                <line id="svg_6" y2="40.66635" x2="-270.66622" y1="40.66635" x1="-269.83289" stroke="#000" fill="none"/>
+                
+                                <!-- Polygon 1: Fill #72b0b4, border hidden -->
+                                <path id="svg_43" d="m18.5002,10.66638l-0.16688,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83285,-187.66678z" opacity="undefined" stroke="none" fill="#72b0b4"/>
+                
+                                <!-- Polygon 2: Fill #fefefc, border hidden -->
+                                <path transform="rotate(-180 333.333 336.166)" id="svg_44" d="m176.00007,81.49965l-0.16689,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83284,-187.66678z" opacity="NaN" stroke="none" fill="#fefefc"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <span class="text-3xl font-extrabold text-[#041f3d]">NAHUSH LOGISTIC</span>
                 </div>
+
+                <!-- Navigation Links (Kept as is) -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#clients" class="text-white hover:text-secondary-gold transition duration-300 font-medium">Clients</a>
-                    <a href="#services" class="text-white hover:text-secondary-gold transition duration-300 font-medium">Services</a>
-                    <a href="#contact" class="text-white hover:text-secondary-gold transition duration-300 font-medium">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">Tracking</a>
+                    <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">About Us</a>
+                    <a href="#" class="text-white bg-[#041f3d] px-4 py-2 rounded-full hover:bg-gray-800 transition duration-150 font-medium">Contact</a>
                 </nav>
-                <!-- Mobile Menu Button (Hamburger) -->
-                <button class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-96 bg-gray-700 overflow-hidden">
-        <!-- Placeholder Image Background (Simulating a logistics image) -->
-        <img src="https://placehold.co/1920x400/003366/ffffff?text=Reliable+Logistics+Partner" alt="Logistics operations" class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="relative flex items-center justify-center h-full bg-primary-blue bg-opacity-40">
-            <div class="text-center p-4">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg">
-                    Excellence in Supply Chain Solutions
-                </h1>
-                <p class="mt-4 text-lg text-secondary-gold font-semibold drop-shadow-md">
-                    Seamless, reliable, and timely execution across India.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview (Brief Placeholder) -->
-    <section id="services" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-primary-blue text-center mb-12">Our Core Expertise</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-bg-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-secondary-gold mb-4 block">🚚</span>
-                    <h3 class="text-xl font-semibold text-text-dark mb-2">Road Freight</h3>
-                    <p class="text-gray-600 text-sm">Efficient transportation of bulk chemicals and general cargo.</p>
-                </div>
-                <div class="p-6 bg-bg-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-secondary-gold mb-4 block">📦</span>
-                    <h3 class="text-xl font-semibold text-text-dark mb-2">Warehousing</h3>
-                    <p class="text-gray-600 text-sm">Safe and compliant storage solutions across key industrial zones.</p>
-                </div>
-                <div class="p-6 bg-bg-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-secondary-gold mb-4 block">⚓</span>
-                    <h3 class="text-xl font-semibold text-text-dark mb-2">Multi-Modal</h3>
-                    <p class="text-gray-600 text-sm">Integrated solutions combining road, rail, and sea transport.</p>
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-background">
+            <div class="overlay w-full h-full flex items-center justify-center text-white">
+                <div class="max-w-5xl mx-auto px-4 text-center">
+                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                        Global Logistics. Simplified.
+                    </h2>
+                    <p class="text-xl md:text-2xl font-light mb-8">
+                        The fastest route for your business is right here. Ship with confidence.
+                    </p>
+                    <a href="#" class="inline-block text-lg text-white bg-[#72b0b4] px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-[#609a9d] transition duration-300 transform hover:scale-105">
+                        Track Your Shipment
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Clients Section - UPDATED LIST -->
-    <section id="clients" class="section-padding bg-primary-blue text-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-secondary-gold text-center mb-12">Our Esteemed Partners</h2>
-            <p class="text-center text-lg mb-10 text-gray-200">
-                We are proud to serve leading names in the Chemical, Pharma, and Manufacturing sectors.
-            </p>
+        <!-- Services Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-4xl font-extrabold text-[#041f3d] mb-4">Our Core Services</h3>
+                <p class="text-xl text-gray-600 mb-12">Integrated solutions for every leg of your supply chain journey.</p>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- NEW CLIENTS ADDED -->
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">BARENTZ INDIA PVT LTD</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">SIDDHARTH CARBOCHEM PRODUCTS LIMITED</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">RISHABH METALS & CHEMICALS PRIVATE LIMITED</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">GANGWAL HEALTHCARE PVT LTD</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">MANEESH PHARMACEUTICALS LTD</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">FLEXILIS PRIVATE LIMITED</div>
-                
-                <!-- Retained/Placeholder Clients for robust list -->
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">GLOBAL CHEMICALS INC.</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">ASIA TRADING HUB</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">MARITIME SOLUTIONS</div>
-                <div class="p-4 text-center bg-white text-primary-blue rounded-lg shadow-xl font-semibold text-sm sm:text-base transition hover:scale-105">RELIABLE PHARMA LTD</div>
-                <!-- The removed clients are intentionally absent from this list -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section - UPDATED HEAD OFFICE & BRANCH ADDRESSES -->
-    <section id="contact" class="section-padding bg-bg-light">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-primary-blue text-center mb-12">Contact Us</h2>
-
-            <!-- Addresses and Form Container, using a 3-column grid on large screens -->
-            <div class="grid lg:grid-cols-3 gap-8">
-                
-                <!-- Address Column (Spans 2/3 on large screens) -->
-                <div class="lg:col-span-2 space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
-                    <!-- Head Office (CBD Belapur) -->
-                    <div class="bg-white p-8 rounded-xl shadow-xl">
-                        <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b pb-2">Head Office (CBD Belapur)</h3>
-                        
-                        <!-- Address Block -->
-                        <div class="space-y-3 text-text-dark text-lg">
-                            <p class="flex items-start">
-                                <span class="text-secondary-gold mr-2 text-2xl">📍</span>
-                                <span>Sky lark building, 305, 3rd Floor, Plot No: 63, Sector 11, Near by UCO Bank, CBD Belapur, Navi Mumbai - 400614</span>
-                            </p>
-                            <p class="font-medium text-gray-700 flex items-center">
-                                <span class="text-secondary-gold mr-2 text-xl">📞</span>
-                                Tel: +91 22 27566248 / 49
-                            </p>
-                            <p class="font-medium text-gray-700 flex items-center">
-                                <span class="text-secondary-gold mr-2 text-xl">📠</span>
-                                Tele Fax No: 27566250
-                            </p>
-                        </div>
+                    <!-- Service Card 1: Air Freight -->
+                    <div class="service-card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-[#72b0b4]">
+                        <svg class="w-10 h-10 mx-auto text-[#041f3d] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-2">Air Freight</h4>
+                        <p class="text-gray-500">Fast, reliable, and secure transportation for time-sensitive cargo worldwide. Expedited services available.</p>
                     </div>
-                    
-                    <!-- Branch Office (Pune) - ADDED -->
-                    <div class="bg-white p-8 rounded-xl shadow-xl">
-                        <h3 class="text-2xl font-bold text-primary-blue mb-4 border-b pb-2">Branch Office (Pune)</h3>
-                        
-                        <!-- Pune Address Block (Placeholder structure) -->
-                        <div class="space-y-3 text-text-dark text-lg">
-                            <p class="flex items-start">
-                                <span class="text-secondary-gold mr-2 text-2xl">📍</span>
-                                <span>101, Crystal Plaza, Near Pune Railway Station, Shivaji Nagar, Pune - 411005 (Placeholder Address)</span>
-                            </p>
-                            <p class="font-medium text-gray-700 flex items-center">
-                                <span class="text-secondary-gold mr-2 text-xl">📞</span>
-                                Tel: +91 20 1234 5678
-                            </p>
-                        </div>
+
+                    <!-- Service Card 2: Ocean Freight -->
+                    <div class="service-card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-[#72b0b4]">
+                        <svg class="w-10 h-10 mx-auto text-[#041f3d] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3a8 8 0 01-8-8 8 8 0 00-8-8v-3"></path></svg>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-2">Ocean Freight</h4>
+                        <p class="text-gray-500">Cost-effective FCL and LCL options for large volume and heavy cargo across all major global routes.</p>
+                    </div>
+
+                    <!-- Service Card 3: Road/Trucking -->
+                    <div class="service-card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-[#72b0b4]">
+                        <svg class="w-10 h-10 mx-auto text-[#041f3d] mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-4h4v4zM17 16h-4V8h4v8zM5 20h4v-4H5v4zM5 16h4V8H5v8zM12 4l-7 7 7 7-7 7 7-7"></path></svg>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-2">Road Transport</h4>
+                        <p class="text-gray-500">Reliable domestic and cross-border trucking, including full-truckload (FTL) and less-than-truckload (LTL).</p>
                     </div>
                 </div>
-
-                <!-- Contact Form Column (Spans 1/3 on large screens) -->
-                <div class="lg:col-span-1 bg-white p-8 rounded-xl shadow-2xl h-fit">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-6 border-b pb-2">Send a Message</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition">
-                        <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition">
-                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 mb-6 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition"></textarea>
-                        <button type="submit" class="w-full bg-secondary-gold text-primary-blue font-bold py-3 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Call to Action Banner -->
+        <section class="bg-[#041f3d] py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-white text-center md:text-left">
+                <h3 class="text-3xl font-extrabold mb-4 md:mb-0">Ready to move your business forward?</h3>
+                <a href="#" class="bg-[#72b0b4] text-[#041f3d] px-8 py-3 rounded-full text-lg font-bold hover:bg-white transition duration-300 shadow-xl">
+                    Request a Custom Quote
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-blue text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Nahush Logistics. All Rights Reserved. | Designed with <span class="text-secondary-gold">Excellence</span></p>
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                
+                <!-- Column 1: Logo & Mission -->
+                <div>
+                    <span class="text-2xl font-extrabold text-[#72b0b4]">NAHUSH LOGISTIC</span>
+                    <p class="text-sm text-gray-400 mt-4">
+                        Seamless global supply chain management with a focus on speed, efficiency, and transparency.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h5 class="text-lg font-semibold mb-3">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-[#72b0b4]">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Careers</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Newsroom</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Partnerships</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h5 class="text-lg font-semibold mb-3">Solutions</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-[#72b0b4]">Air Freight</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Ocean Freight</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Customs Brokerage</a></li>
+                        <li><a href="#" class="hover:text-[#72b0b4]">Warehousing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h5 class="text-lg font-semibold mb-3">Contact Info</h5>
+                    <p class="text-sm text-gray-400">123 Logistics Ave, Global City</p>
+                    <p class="text-sm text-gray-400 mt-2">Email: info@nahushlogistic.com</p>
+                    <p class="text-sm text-gray-400">Phone: +1 (555) 123-4567</p>
+                </div>
+
+            </div>
+
+            <div class="text-center text-sm text-gray-500">
+                &copy; 2025 Nahush Logistic. All rights reserved.
+            </div>
         </div>
     </footer>
-
 </body>
 </html>

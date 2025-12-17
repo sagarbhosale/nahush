@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE ahtml>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,17 +37,7 @@
             right: 0;
             z-index: 10;
         }
-        /* Hero section specific styling for the truck image placeholder */
-        .hero-background {
-            background-image: url('https://placehold.co/1200x500/041f3d/72b0b4?text=Modern+Logistics+%26+Supply+Chain');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            position: relative;
-        }
-        .overlay {
-            background-color: rgba(4, 31, 61, 0.6); /* Semi-transparent dark overlay */
-        }
+        /* Card hover effect */
         .service-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -59,7 +49,7 @@
 </head>
 <body>
     
-    <!-- Header with Embedded SVG Logo (Kept as is) -->
+    <!-- Header with Embedded SVG Logo (Simplified Layout) -->
     <header id="main-header" class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -87,12 +77,13 @@
                     <span class="text-3xl font-extrabold text-[#041f3d]">NAHUSH LOGISTIC</span>
                 </div>
 
-                <!-- Navigation Links (Kept as is) -->
+                <!-- Navigation Links - Hidden on mobile, shown on larger screens -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">Services</a>
-                    <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">Tracking</a>
+                    <!-- Contact now uses the prominent button styling -->
+                    <a href="#contact-form-section" class="text-white bg-[#041f3d] px-4 py-2 rounded-full hover:bg-gray-800 transition duration-150 font-medium">Contact</a> 
                     <a href="#" class="text-gray-600 hover:text-[#72b0b4] transition duration-150 font-medium">About Us</a>
-                    <a href="#" class="text-white bg-[#041f3d] px-4 py-2 rounded-full hover:bg-gray-800 transition duration-150 font-medium">Contact</a>
+                    <!-- Tracking button was removed -->
                 </nav>
             </div>
         </div>
@@ -100,30 +91,65 @@
 
     <!-- Main Content Area -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero-background">
-            <div class="overlay w-full h-full flex items-center justify-center text-white">
-                <div class="max-w-5xl mx-auto px-4 text-center">
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-                        Global Logistics. Simplified.
-                    </h2>
-                    <p class="text-xl md:text-2xl font-light mb-8">
-                        The fastest route for your business is right here. Ship with confidence.
-                    </p>
-                    <a href="#" class="inline-block text-lg text-white bg-[#72b0b4] px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-[#609a9d] transition duration-300 transform hover:scale-105">
-                        Track Your Shipment
-                    </a>
-                </div>
+        <!-- Hero Section (Simplified) -->
+        <section class="bg-[#041f3d] py-32 text-white flex items-center justify-center">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                    Global Logistics. Simplified.
+                </h2>
+                <p class="text-xl md:text-2xl font-light mb-8">
+                    The fastest route for your business is right here. Ship with confidence.
+                </p>
+                <a href="#contact-form-section" class="inline-block text-lg text-white bg-[#72b0b4] px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-[#609a9d] transition duration-300 transform hover:scale-105">
+                    Request a Quote
+                </a>
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Contact Form Section -->
+        <section id="contact-form-section" class="py-16 bg-gray-100">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-extrabold text-[#041f3d] mb-4">Get in Touch</h3>
+                <p class="text-lg text-gray-600 mb-8">Have questions or need a custom logistics solution? Contact us below.</p>
+
+                <!-- Formspree Contact Form -->
+                <div class="bg-white p-6 rounded-xl shadow-2xl border-t-4 border-[#041f3d]">
+                    <form action="https://formspree.io/f/xjkndydz" method="POST" class="space-y-4 text-left">
+                        
+                        <label class="block font-medium text-gray-700">
+                            Your Email:
+                            <input type="email" name="email" 
+                                   class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-[#72b0b4] focus:border-transparent text-gray-800 shadow-inner"
+                                   placeholder="you@example.com" required>
+                        </label>
+                        
+                        <label class="block font-medium text-gray-700">
+                            Your Message:
+                            <textarea name="message" rows="4"
+                                      class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-[#72b0b4] focus:border-transparent text-gray-800 shadow-inner"
+                                      placeholder="Tell us about your logistics needs..." required></textarea>
+                        </label>
+                        
+                        <!-- Hidden field for context (optional) -->
+                        <input type="hidden" name="_subject" value="Nahush Logistic Website Inquiry">
+
+                        <button type="submit" 
+                                class="w-full bg-[#72b0b4] text-[#041f3d] py-4 rounded-lg text-xl font-bold hover:bg-[#609a9d] transition duration-300 shadow-md transform hover:scale-[1.01]">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section (Simplified to single column for all sizes) -->
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h3 class="text-4xl font-extrabold text-[#041f3d] mb-4">Our Core Services</h3>
                 <p class="text-xl text-gray-600 mb-12">Integrated solutions for every leg of your supply chain journey.</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Changed to always be grid-cols-1 for simplicity across all screens -->
+                <div class="grid grid-cols-1 gap-8">
                     
                     <!-- Service Card 1: Air Freight -->
                     <div class="service-card bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-[#72b0b4]">
@@ -148,12 +174,54 @@
                 </div>
             </div>
         </section>
+
+        <!-- Clients Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-4xl font-extrabold text-[#041f3d] mb-4">Our Esteemed Clients</h3>
+                <p class="text-xl text-gray-600 mb-12">Trusted partners in global logistics.</p>
+
+                <!-- Client Logos Grid (using text names for simplicity) -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-center">
+                    
+                    <!-- Client 1 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">BARENTZ INDIA PVT LTD</p>
+                    </div>
+
+                    <!-- Client 2 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">SIDDHARTH CARBOCHEM PRODUCTS LIMITED</p>
+                    </div>
+
+                    <!-- Client 3 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">RISHABH METALS & CHEMICALS PRIVATE LIMITED</p>
+                    </div>
+
+                    <!-- Client 4 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">GANGWAL HEALTHCARE PVT LTD</p>
+                    </div>
+                    
+                    <!-- Client 5 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">MANEESH PHARMACEUTICALS LTD</p>
+                    </div>
+
+                    <!-- Client 6 -->
+                    <div class="p-4 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-[#72b0b4] transition duration-300 transform hover:scale-[1.02] min-h-[80px] flex items-center justify-center">
+                        <p class="text-sm font-semibold text-gray-700">FLEXILIS PRIVATE LIMITED</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <!-- Call to Action Banner -->
+        <!-- Call to Action Banner (Simplified to stacked layout) -->
         <section class="bg-[#041f3d] py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-white text-center md:text-left">
-                <h3 class="text-3xl font-extrabold mb-4 md:mb-0">Ready to move your business forward?</h3>
-                <a href="#" class="bg-[#72b0b4] text-[#041f3d] px-8 py-3 rounded-full text-lg font-bold hover:bg-white transition duration-300 shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-white text-center">
+                <h3 class="text-3xl font-extrabold mb-4">Ready to move your business forward?</h3>
+                <a href="#contact-form-section" class="bg-[#72b0b4] text-[#041f3d] px-8 py-3 rounded-full text-lg font-bold hover:bg-white transition duration-300 shadow-xl">
                     Request a Custom Quote
                 </a>
             </div>
@@ -161,10 +229,11 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Simplified to single column for all sizes) -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+            <!-- Changed to always be grid-cols-1 for simplicity across all screens -->
+            <div class="grid grid-cols-1 gap-8 border-b border-gray-700 pb-8 mb-8">
                 
                 <!-- Column 1: Logo & Mission -->
                 <div>
@@ -178,10 +247,7 @@
                 <div>
                     <h5 class="text-lg font-semibold mb-3">Company</h5>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-[#72b0b4]">About Us</a></li>
-                        <li><a href="#" class="hover:text-[#72b0b4]">Careers</a></li>
-                        <li><a href="#" class="hover:text-[#72b0b4]">Newsroom</a></li>
-                        <li><a href="#" class="hover:text-[#72b0b4]">Partnerships</a></li>
+                        <!-- Removed: About Us, Careers, Newsroom, Partnerships -->
                     </ul>
                 </div>
 
@@ -199,9 +265,19 @@
                 <!-- Column 4: Contact -->
                 <div>
                     <h5 class="text-lg font-semibold mb-3">Contact Info</h5>
-                    <p class="text-sm text-gray-400">123 Logistics Ave, Global City</p>
-                    <p class="text-sm text-gray-400 mt-2">Email: info@nahushlogistic.com</p>
-                    <p class="text-sm text-gray-400">Phone: +1 (555) 123-4567</p>
+                    
+                    <!-- Head Office -->
+                    <p class="text-sm text-gray-400 font-semibold mb-2">Head Office (Navi Mumbai):</p>
+                    <p class="text-sm text-gray-400">Sky lark building, 305, 3rd Floor, Plot No: 63, Sector 11, Near by UCO Bank, CBD Belapur, Navi Mumbai - 400614</p>
+                    <p class="text-sm text-gray-400 mt-2">Tel: +91 22 27566248 / 49</p>
+                    <p class="text-sm text-gray-400">Tele Fax No: 27566250</p>
+
+                    <!-- Branch Office (New) -->
+                    <p class="text-sm text-gray-400 font-semibold mt-4 mb-2">Branch Office (Pune):</p>
+                    <p class="text-sm text-gray-400">Ground Floor, Shop No G-15, Sacred World, Wanawadi, Pune- 411040, India</p>
+                    <p class="text-sm text-gray-400 mt-2">Mobile: +91 7972060379, +91 9689099037</p>
+
+                    <p class="text-sm text-gray-400 mt-4">Email: info@nahushlogistic.com</p>
                 </div>
 
             </div>

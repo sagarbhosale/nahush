@@ -1,0 +1,16 @@
+        <svg xmlns="http://www.w3.org/2000/svg" width="507" height="597" class="mx-auto block">
+
+            <g>
+             <title>Layer 1</title>
+             <!-- Small shapes (unchanged) -->
+             <path stroke="#000" id="svg_2" d="m-84.08746,254.19481l0.31929,-0.63857l0.85143,0l0.31929,0.63857l-0.31929,0.63857l-0.85143,0l-0.31929,-0.63857z" fill="#fff"/>
+             <path transform="rotate(43.0194 -493.056 -28.4898)" stroke="#000" id="svg_3" d="m-278.03126,-28.48983l-92.1533,-0.63857l-245.74212,0l-92.15327,0.63857l92.15327,0.63857l245.74212,0l92.1533,-0.63857z" fill="#fff"/>
+             <line id="svg_6" y2="40.66635" x2="-270.66622" y1="40.66635" x1="-269.83289" stroke="#000" fill="none"/>
+
+             <!-- Polygon 1: New Teal-like fill, border hidden -->
+             <path id="svg_43" d="m18.5002,10.66638l-0.16688,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83285,-187.66678z" opacity="undefined" stroke="none" fill="#72b0b4"/>
+
+             <!-- Polygon 2: New White-like fill, border hidden -->
+             <path transform="rotate(-180 333.333 336.166)" id="svg_44" d="m176.00007,81.49965l-0.16689,509.33317l84.99993,0l0,-346.66637l229.9998,133.33322l0,-108.33324l-314.83284,-187.66678z" opacity="NaN" stroke="none" fill="#fefefc"/>
+            </g>
+        </svg>

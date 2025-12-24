@@ -15,14 +15,15 @@
             background-color: #f7f9fb;
             margin: 0;
             padding-top: 72px; 
+            -webkit-font-smoothing: antialiased;
         }
         .svg-container {
-            width: 48px; 
-            height: 48px;
+            width: 42px; 
+            height: 42px;
             border-radius: 0.5rem;
             box-shadow: 0 0 10px rgba(4, 31, 61, 0.7);
             background-color: #041f3d;
-            padding: 0.4rem; 
+            padding: 0.35rem; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -32,6 +33,7 @@
             .svg-container {
                 width: 64px;
                 height: 64px;
+                padding: 0.4rem;
             }
         }
         #main-header {
@@ -64,10 +66,10 @@
     <!-- Header -->
     <header id="main-header" class="bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-16 md:h-20">
                 
                 <!-- Logo Area -->
-                <a href="#top" class="flex items-center space-x-3 sm:space-x-4">
+                <a href="#top" class="flex items-center space-x-2 sm:space-x-4">
                     <div class="svg-container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 507 597">
                             <g>
@@ -76,19 +78,20 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="text-lg sm:text-2xl font-extrabold text-[#041f3d] tracking-tight leading-none uppercase">Nahush Logistic</span>
+                    <span class="text-base sm:text-xl md:text-2xl font-extrabold text-[#041f3d] tracking-tight leading-none uppercase">Nahush Logistic</span>
                 </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="text-gray-600 hover:text-[#72b0b4] transition font-medium">About Us</a>
                     <a href="#services" class="text-gray-600 hover:text-[#72b0b4] transition font-medium">Services</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-[#72b0b4] transition font-medium">Why Us</a>
                     <a href="#contact-form-section" class="text-white bg-[#041f3d] px-6 py-2.5 rounded-full hover:bg-opacity-90 transition font-bold shadow-sm">Contact</a> 
                 </nav>
 
                 <!-- Mobile Menu Button -->
                 <button id="menu-toggle" class="md:hidden text-[#041f3d] focus:outline-none p-2" aria-label="Toggle Menu">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
@@ -97,26 +100,27 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 animate-fade-in-down">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#about" class="block px-3 py-4 text-base font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">About Us</a>
-                <a href="#services" class="block px-3 py-4 text-base font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Services</a>
-                <a href="#contact-form-section" class="block px-3 py-4 text-base font-bold text-white bg-[#041f3d] rounded-lg text-center shadow-md">Contact Us</a>
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">About Us</a>
+                <a href="#services" class="block px-3 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Services</a>
+                <a href="#why-us" class="block px-3 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Why Us</a>
+                <a href="#contact-form-section" class="block px-3 py-4 mt-2 text-base font-bold text-white bg-[#041f3d] rounded-lg text-center shadow-md">Contact Us</a>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-[#041f3d] py-16 md:py-32 text-white overflow-hidden relative">
+        <section class="bg-[#041f3d] py-12 md:py-32 text-white overflow-hidden relative">
             <div class="max-w-5xl mx-auto px-4 text-center">
-                <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
                     Your Cargo.<br class="md:hidden"> Our Commitment.
                 </h1>
-                <p class="text-base sm:text-lg md:text-2xl font-light mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto">
+                <p class="text-sm sm:text-lg md:text-2xl font-light mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto px-4">
                     The fastest route for your business is right here. Ship with confidence across borders and oceans.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact-form-section" class="w-full sm:w-auto inline-block text-lg text-[#041f3d] bg-[#72b0b4] px-10 py-4 rounded-full font-bold shadow-xl hover:bg-[#609a9d] transition duration-300 transform active:scale-95">
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 px-6">
+                    <a href="#contact-form-section" class="w-full sm:w-auto inline-block text-base sm:text-lg text-[#041f3d] bg-[#72b0b4] px-8 py-3.5 sm:px-10 sm:py-4 rounded-full font-bold shadow-xl hover:bg-[#609a9d] transition duration-300 transform active:scale-95">
                         Request a Quote
                     </a>
                 </div>
@@ -124,59 +128,59 @@
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="py-16 md:py-24 bg-white overflow-hidden border-b border-gray-100">
+        <section id="about" class="py-12 md:py-24 bg-white overflow-hidden border-b border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
                     <div class="relative">
                         <div class="absolute -top-4 -left-4 w-24 h-24 bg-[#72b0b4]/10 rounded-full blur-2xl"></div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold text-[#041f3d] mb-6 leading-tight">
+                        <h2 class="text-2xl md:text-5xl font-extrabold text-[#041f3d] mb-4 md:mb-6 leading-tight">
                             Reliable Logistics Solutions <span class="text-[#72b0b4]">Based in India</span>
                         </h2>
-                        <div class="w-20 h-1 bg-[#72b0b4] mb-8"></div>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <div class="w-16 h-1 bg-[#72b0b4] mb-6 md:mb-8"></div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
                             <strong>Nahush Logistics Pvt. Ltd.</strong> is a professional and reliable logistics service provider based in India, specializing in Customs House Agent (CHA) Services, Air & Sea Freight Forwarding, Transportation, Warehousing, and end-to-end supply chain solutions.
                         </p>
-                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                            With over <strong>12+ years of industry experience</strong>, we bring operational excellence, transparency, and speed to every shipment. We ensure that your cargo moves smoothly, compliantly, and on time—every time.
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+                            With over <strong>12+ years of industry experience</strong>, we bring operational excellence, transparency, and speed to every shipment.
                         </p>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="border-l-4 border-[#72b0b4] pl-4">
-                                <span class="block text-3xl font-bold text-[#041f3d]">12+</span>
-                                <span class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Years Experience</span>
+                        <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                            <div class="border-l-4 border-[#72b0b4] pl-3 sm:pl-4">
+                                <span class="block text-2xl sm:text-3xl font-bold text-[#041f3d]">12+</span>
+                                <span class="text-[10px] sm:text-sm text-gray-500 uppercase tracking-wider font-semibold">Years Experience</span>
                             </div>
-                            <div class="border-l-4 border-[#041f3d] pl-4">
-                                <span class="block text-3xl font-bold text-[#041f3d]">100%</span>
-                                <span class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Compliance</span>
+                            <div class="border-l-4 border-[#041f3d] pl-3 sm:pl-4">
+                                <span class="block text-2xl sm:text-3xl font-bold text-[#041f3d]">100%</span>
+                                <span class="text-[10px] sm:text-sm text-gray-500 uppercase tracking-wider font-semibold">Compliance</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 relative border border-gray-100 shadow-inner">
+                    <div class="bg-gray-50 rounded-2xl md:rounded-3xl p-6 md:p-12 relative border border-gray-100 shadow-inner">
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
-                                <div class="bg-[#041f3d] p-3 rounded-xl text-white">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                <div class="bg-[#041f3d] p-2.5 rounded-lg text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-[#041f3d]">Operational Excellence</h4>
-                                    <p class="text-gray-600">Streamlined processes for maximum efficiency.</p>
+                                    <h4 class="text-lg font-bold text-[#041f3d]">Operational Excellence</h4>
+                                    <p class="text-sm text-gray-600">Streamlined processes for maximum efficiency.</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div class="bg-[#72b0b4] p-3 rounded-xl text-white">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                <div class="bg-[#72b0b4] p-2.5 rounded-lg text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-[#041f3d]">Unmatched Speed</h4>
-                                    <p class="text-gray-600">On-time delivery for every single shipment.</p>
+                                    <h4 class="text-lg font-bold text-[#041f3d]">Unmatched Speed</h4>
+                                    <p class="text-sm text-gray-600">On-time delivery for every single shipment.</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div class="bg-[#041f3d] p-3 rounded-xl text-white">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <div class="bg-[#041f3d] p-2.5 rounded-lg text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-[#041f3d]">Full Transparency</h4>
-                                    <p class="text-gray-600">Real-time updates and honest communication.</p>
+                                    <h4 class="text-lg font-bold text-[#041f3d]">Full Transparency</h4>
+                                    <p class="text-sm text-gray-600">Real-time updates and honest communication.</p>
                                 </div>
                             </div>
                         </div>
@@ -186,85 +190,108 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-16 md:py-24 bg-[#f7f9fb]">
+        <section id="services" class="py-12 md:py-24 bg-[#f7f9fb]">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#041f3d] mb-4">Logistics & Freight Solutions</h2>
-                    <div class="w-20 h-1 bg-[#72b0b4] mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Our comprehensive logistics services are designed to ensure your cargo moves across borders with precision, speed, and full compliance.
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-[#041f3d] mb-4 uppercase tracking-tight px-2">Logistics & Freight Solutions</h2>
+                    <div class="w-16 h-1.5 bg-[#72b0b4] mx-auto mb-6 rounded-full"></div>
+                    <p class="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+                        Comprehensive services designed to ensure your cargo moves with precision and speed.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <!-- Air Freight -->
-                    <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
-                        <div class="w-14 h-14 bg-[#72b0b4]/10 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-[#72b0b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    <div class="service-card bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-[#72b0b4]/10 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-[#72b0b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#041f3d] mb-4">Air Freight Handling</h3>
-                        <p class="text-gray-600 mb-6 font-medium">Fast, reliable, and secure air cargo solutions.</p>
-                        <p class="text-sm text-gray-500 mb-6 leading-relaxed">We provide end-to-end coordination across airlines, terminals, and customs. Our team focuses on:</p>
-                        <ul class="space-y-4 mt-auto">
+                        <h3 class="text-xl font-bold text-[#041f3d] mb-3">Air Freight Handling</h3>
+                        <p class="text-sm text-gray-600 mb-4 font-medium">Fast, reliable, and secure air cargo solutions.</p>
+                        <ul class="space-y-3 mt-auto">
                             <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">SPEED</span>
-                                <span class="text-sm text-gray-700">Quick transit for time-critical shipments.</span>
+                                <span class="bg-[#72b0b4] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1">SPEED</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Quick transit for time-critical shipments.</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">ACCURACY</span>
-                                <span class="text-sm text-gray-700">Meticulous documentation to prevent delays.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">SECURITY</span>
-                                <span class="text-sm text-gray-700">Safe handling for high-value or sensitive goods.</span>
+                                <span class="bg-[#72b0b4] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1 uppercase">Care</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Safe handling for sensitive goods.</span>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Sea Freight -->
-                    <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
-                        <div class="w-14 h-14 bg-[#041f3d]/10 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-[#041f3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div class="service-card bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-[#041f3d]/10 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-[#041f3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#041f3d] mb-4">Sea Freight Handling</h3>
-                        <p class="text-gray-600 mb-6 font-medium">Cost-effective and efficient global maritime management.</p>
-                        <p class="text-sm text-gray-500 mb-6 leading-relaxed">Leveraging strong carrier networks, we provide a smooth movement of goods via:</p>
-                        <ul class="space-y-4 mt-auto">
+                        <h3 class="text-xl font-bold text-[#041f3d] mb-3">Sea Freight Handling</h3>
+                        <p class="text-sm text-gray-600 mb-4 font-medium">Cost-effective global maritime management.</p>
+                        <ul class="space-y-3 mt-auto">
                             <li class="flex items-start">
-                                <span class="bg-[#041f3d] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">FCL & LCL</span>
-                                <span class="text-sm text-gray-700">Flexible Full and Less than Container Load options.</span>
+                                <span class="bg-[#041f3d] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1">FCL</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Full Container Load efficiency.</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-[#041f3d] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">PORT</span>
-                                <span class="text-sm text-gray-700">Seamless management of port-side logistics.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-[#041f3d] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">VISIBILITY</span>
-                                <span class="text-sm text-gray-700">Full tracking and coordination for global movement.</span>
+                                <span class="bg-[#041f3d] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1">LCL</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Less than Container Load options.</span>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Customs Clearing -->
-                    <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full">
-                        <div class="w-14 h-14 bg-[#72b0b4]/10 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-[#72b0b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <div class="service-card bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 flex flex-col h-full md:col-span-2 lg:col-span-1">
+                        <div class="w-12 h-12 bg-[#72b0b4]/10 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-[#72b0b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#041f3d] mb-4">Customs Clearing Services</h3>
-                        <p class="text-gray-600 mb-6 font-medium">Simplifying complex import-export formalities.</p>
-                        <p class="text-sm text-gray-500 mb-6 leading-relaxed">We ensure your shipments remain fully compliant with Indian customs laws. Our service includes:</p>
-                        <ul class="space-y-4 mt-auto">
+                        <h3 class="text-xl font-bold text-[#041f3d] mb-3">Customs Clearing</h3>
+                        <p class="text-sm text-gray-600 mb-4 font-medium">Simplifying complex import-export formalities.</p>
+                        <ul class="space-y-3 mt-auto">
                             <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">FILING</span>
-                                <span class="text-sm text-gray-700">Accurate documentation and timely submission.</span>
+                                <span class="bg-[#72b0b4] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1">LEGAL</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Accurate filing and compliance management.</span>
                             </li>
                             <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">COORDINATION</span>
-                                <span class="text-sm text-gray-700">Liaison with shipping lines, port, and customs.</span>
+                                <span class="bg-[#72b0b4] text-white text-[9px] font-bold px-1.5 py-0.5 rounded mr-3 mt-1">SPEED</span>
+                                <span class="text-xs sm:text-sm text-gray-700">Streamlined processes to reduce turnaround.</span>
                             </li>
-                            <li class="flex items-start">
-                                <span class="bg-[#72b0b4] text-white text-xs font-bold px-2 py-1 rounded mr-3 mt-0.5">EFFICIENCY</span>
-                                <span class="text-sm text-gray-700">Streamlined processes to reduce turnaround time.</span>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Support -->
+                <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div class="bg-[#041f3d] rounded-2xl md:rounded-[2rem] p-6 md:p-10 text-white shadow-xl">
+                        <h4 class="text-lg md:text-2xl font-bold mb-4 md:mb-6 flex items-center">
+                            <span class="w-6 h-6 md:w-8 md:h-8 bg-[#72b0b4] rounded flex items-center justify-center mr-3 text-[10px] md:text-sm">01</span>
+                            Premium Offering
+                        </h4>
+                        <div class="flex items-center p-4 md:p-6 bg-white/5 rounded-xl border border-white/10">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 text-[#72b0b4] mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            <div>
+                                <span class="text-[#72b0b4] uppercase text-[9px] md:text-xs font-bold tracking-widest block mb-0.5">End-to-End</span>
+                                <span class="text-base md:text-xl font-bold">Door-to-Door Logistics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-10 shadow-lg border border-gray-100">
+                        <h4 class="text-lg md:text-2xl font-bold text-[#041f3d] mb-4 md:mb-6 flex items-center">
+                            <span class="w-6 h-6 md:w-8 md:h-8 bg-[#041f3d] text-white rounded flex items-center justify-center mr-3 text-[10px] md:text-sm">02</span>
+                            Support Services
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-[11px] sm:text-sm font-semibold">Custom & Docs Handling</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-[11px] sm:text-sm font-semibold">DGFT Licensing</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100 sm:col-span-2">
+                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-[11px] sm:text-sm font-semibold">Port & CFS Coordination</span>
                             </li>
                         </ul>
                     </div>
@@ -273,69 +300,65 @@
         </section>
 
         <!-- Partners Section -->
-        <section class="py-12 md:py-20 bg-gray-50">
+        <section class="py-10 md:py-20 bg-gray-50 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-[#041f3d] mb-12">Trusted Partners</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Barentz India</span>
+                <h2 class="text-xl md:text-3xl font-extrabold text-[#041f3d] mb-8 md:mb-12 uppercase tracking-wide">Trusted Partners</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Barentz India</span>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Siddharth Carbochem</span>
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Siddharth Carbochem</span>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Rishabh Metals</span>
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Rishabh Metals</span>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Gangwal Healthcare</span>
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Gangwal Healthcare</span>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Maneesh Pharma</span>
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Maneesh Pharma</span>
                     </div>
-                    <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center min-h-[100px] text-center">
-                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Flexilis Pvt Ltd</span>
+                    <div class="p-4 md:p-6 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center min-h-[70px] md:min-h-[100px] text-center">
+                        <span class="text-[10px] md:text-xs font-bold text-gray-800 uppercase tracking-wider">Flexilis Pvt Ltd</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us Section -->
-        <section class="py-16 md:py-24 bg-[#041f3d] text-white relative overflow-hidden">
-            <!-- Decorative background elements -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-[#72b0b4]/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#72b0b4]/5 rounded-full -ml-48 -mb-48 blur-3xl"></div>
-            
+        <section id="why-us" class="py-12 md:py-24 bg-[#041f3d] text-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Why Choose Us?</h2>
-                    <div class="w-24 h-1.5 bg-[#72b0b4] mx-auto mb-10 rounded-full"></div>
-                    <p class="text-xl md:text-2xl font-light text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                        Reliable, experienced, and customer-focused logistics partner offering <span class="text-white font-semibold">end-to-end solutions under one roof</span>.
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl md:text-5xl font-extrabold mb-4 md:mb-6 tracking-tight uppercase">Why Choose Us?</h2>
+                    <div class="w-16 h-1 bg-[#72b0b4] mx-auto mb-8 rounded-full"></div>
+                    <p class="text-base md:text-2xl font-light text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
+                        Reliable, experienced, and customer-focused logistics partner offering <span class="text-white font-semibold">solutions under one roof</span>.
                     </p>
                 </div>
 
                 <div class="max-w-4xl mx-auto">
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl">
-                        <p class="text-lg md:text-xl text-gray-200 leading-relaxed text-center italic">
-                            "We ensure fast customs clearance, smooth air & sea freight handling, accurate documentation, transparent communication, and on-time delivery—every time."
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-12 rounded-2xl md:rounded-[2.5rem] shadow-2xl">
+                        <p class="text-sm md:text-xl text-gray-200 leading-relaxed text-center italic">
+                            "We ensure fast customs clearance, smooth air & sea freight handling, accurate documentation, and on-time delivery—every time."
                         </p>
                         
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-white/10">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 md:mt-12 pt-8 md:pt-12 border-t border-white/10">
                             <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-2xl mb-1 italic">Fast</div>
-                                <div class="text-xs uppercase tracking-widest text-gray-400">Clearance</div>
+                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Fast</div>
+                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Clearance</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-2xl mb-1 italic">Smooth</div>
-                                <div class="text-xs uppercase tracking-widest text-gray-400">Handling</div>
+                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Smooth</div>
+                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Handling</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-2xl mb-1 italic">Accurate</div>
-                                <div class="text-xs uppercase tracking-widest text-gray-400">Documentation</div>
+                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Accurate</div>
+                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Docs</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-2xl mb-1 italic">On-Time</div>
-                                <div class="text-xs uppercase tracking-widest text-gray-400">Every Time</div>
+                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Reliable</div>
+                                <div class="text-[9px] uppercase tracking-widest text-gray-400">On-Time</div>
                             </div>
                         </div>
                     </div>
@@ -344,26 +367,26 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact-form-section" class="py-16 md:py-24 bg-white relative">
+        <section id="contact-form-section" class="py-12 md:py-24 bg-white relative">
             <div class="max-w-xl mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-[#041f3d] mb-4">Get in Touch</h2>
-                <p class="text-base md:text-lg text-gray-600 mb-10">Have questions or need a custom logistics solution? Reach out today.</p>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-[#041f3d] mb-3">Get in Touch</h2>
+                <p class="text-sm md:text-lg text-gray-600 mb-8 px-4">Need a custom logistics solution? Reach out today.</p>
 
-                <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl border border-gray-100">
-                    <form action="https://formspree.io/f/xjkndydz" method="POST" class="space-y-6 text-left">
+                <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl border border-gray-100">
+                    <form action="https://formspree.io/f/xjkndydz" method="POST" class="space-y-4 md:space-y-6 text-left">
                         <div>
-                            <label class="block font-bold text-gray-700 mb-2 text-sm uppercase tracking-wide">Email Address</label>
-                            <input type="email" name="email" class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-gray-800 transition" placeholder="you@company.com" required>
+                            <label class="block font-bold text-gray-700 mb-1.5 text-[11px] uppercase tracking-wide">Email Address</label>
+                            <input type="email" name="email" class="w-full p-3.5 md:p-4 border border-gray-200 rounded-lg md:rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-sm md:text-base text-gray-800 transition" placeholder="you@company.com" required>
                         </div>
                         
                         <div>
-                            <label class="block font-bold text-gray-700 mb-2 text-sm uppercase tracking-wide">Project Details</label>
-                            <textarea name="message" rows="4" class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-gray-800 transition" placeholder="Describe your shipping or logistics requirements..." required></textarea>
+                            <label class="block font-bold text-gray-700 mb-1.5 text-[11px] uppercase tracking-wide">Message</label>
+                            <textarea name="message" rows="4" class="w-full p-3.5 md:p-4 border border-gray-200 rounded-lg md:rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-sm md:text-base text-gray-800 transition" placeholder="Tell us about your requirements..." required></textarea>
                         </div>
 
                         <input type="hidden" name="_subject" value="Nahush Logistic Website Inquiry">
 
-                        <button type="submit" class="w-full bg-[#041f3d] text-white py-4 rounded-xl text-lg font-bold hover:bg-black transition duration-300 shadow-lg active:scale-95">
+                        <button type="submit" class="w-full bg-[#041f3d] text-white py-3.5 md:py-4 rounded-lg md:rounded-xl text-base md:text-lg font-bold hover:bg-black transition duration-300 shadow-lg active:scale-95">
                             Send Message
                         </button>
                     </form>
@@ -373,72 +396,59 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#041f3d] text-gray-300 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-gray-700">
+    <footer class="bg-[#041f3d] text-gray-300 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 pb-10 border-b border-gray-700">
                 <div class="lg:col-span-2">
-                    <h4 class="text-white font-bold mb-6 text-lg">About Us</h4>
-                    <p class="text-sm leading-relaxed text-gray-400 max-w-md">
-                        Nahush Logistics Pvt. Ltd. is a professional and reliable logistics service provider based in India, specializing in Customs House Agent (CHA) Services, Air & Sea Freight Forwarding, and end-to-end supply chain solutions.
+                    <h4 class="text-white font-bold mb-4 text-base md:text-lg">About Us</h4>
+                    <p class="text-xs md:text-sm leading-relaxed text-gray-400 max-w-md">
+                        Nahush Logistics Pvt. Ltd. is a reliable service provider specializing in Customs House Agent (CHA) Services, Air & Sea Freight, and supply chain solutions.
                     </p>
-                    <div class="mt-6 flex space-x-4">
-                        <span class="text-[#72b0b4] font-bold">12+ Years Experience</span>
+                    <div class="mt-4 flex space-x-4">
+                        <span class="text-[#72b0b4] font-bold text-xs md:text-sm">12+ Years Experience</span>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Services</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li><a href="#services" class="hover:text-[#72b0b4] transition">Air Freight Handling</a></li>
-                        <li><a href="#services" class="hover:text-[#72b0b4] transition">Sea Freight Handling</a></li>
+                    <h4 class="text-white font-bold mb-4 text-base md:text-lg">Services</h4>
+                    <ul class="space-y-2 md:space-y-4 text-[11px] md:text-sm">
+                        <li><a href="#services" class="hover:text-[#72b0b4] transition">Air Freight</a></li>
+                        <li><a href="#services" class="hover:text-[#72b0b4] transition">Sea Freight</a></li>
                         <li><a href="#services" class="hover:text-[#72b0b4] transition">Customs Clearing</a></li>
                         <li><a href="#contact-form-section" class="hover:text-[#72b0b4] transition">DGFT Support</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Contact Info</h4>
-                    <ul class="text-sm space-y-6">
+                    <h4 class="text-white font-bold mb-4 text-base md:text-lg">Contact Info</h4>
+                    <ul class="text-[11px] md:text-sm space-y-4 md:space-y-6">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-3 text-[#72b0b4] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <svg class="w-4 h-4 mr-2 text-[#72b0b4] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                             <div>
-                                <strong class="text-white block mb-1">Mumbai Office</strong>
-                                Sky lark building, 305, CBD Belapur, Navi Mumbai - 400614<br>
-                                <a href="tel:+912227566248" class="hover:text-[#72b0b4] transition">+91 22 27566248</a>
+                                <strong class="text-white block mb-0.5">Mumbai Office</strong>
+                                CBD Belapur, Navi Mumbai - 400614
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-3 text-[#72b0b4] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <div>
-                                <strong class="text-white block mb-1">Pune Office</strong>
-                                Shop No G-15 Ground floor, Sacred World, Jagtap chowk, Wanawadi, Pune - 411040<br>
-                                <a href="tel:+917972060379" class="hover:text-[#72b0b4] transition">+91 7972060379</a><br>
-                                <a href="tel:+919689099039" class="hover:text-[#72b0b4] transition">+91 9689099039</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-3 text-[#72b0b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-4 h-4 mr-2 text-[#72b0b4] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <a href="mailto:contact@nahushlogistic.com" class="hover:text-white transition">contact@nahushlogistic.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 text-center text-xs text-gray-500 font-medium">
+            <div class="pt-8 text-center text-[10px] text-gray-500 font-medium">
                 &copy; 2025 Nahush Logistic. All rights reserved.
             </div>
         </div>
     </footer>
 
     <script>
-        // Toggle mobile menu
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
 
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
-            
-            // Toggle between Hamburger and Close icon
             if (mobileMenu.classList.contains('active')) {
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
             } else {
@@ -446,7 +456,6 @@
             }
         });
 
-        // Close mobile menu when clicking a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {

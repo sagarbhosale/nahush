@@ -62,11 +62,24 @@
         #mobile-menu.active {
             display: block;
         }
+        
+        /* Responsive Image Handling */
         .visual-section img {
             width: 100%;
             height: auto;
             display: block;
+            object-fit: cover;
+            /* Using aspect-ratio to prevent layout shifts and ensure good mobile framing */
+            aspect-ratio: 16 / 9;
         }
+
+        @media (min-width: 1024px) {
+            .visual-section img {
+                aspect-ratio: 21 / 9; /* Wider panorama for desktop */
+                max-height: 600px;
+            }
+        }
+
         #map {
             border-radius: 1rem;
             overflow: hidden;
@@ -144,7 +157,7 @@
 
         <!-- Visual Section: Ship 2 -->
         <section class="visual-section w-full">
-            <img src="https://nahushlogistic.com/cargo_ship_2.jpeg" alt="Global Maritime Freight" class="w-full object-cover max-h-[600px]">
+            <img src="https://nahushlogistic.com/logis-tech.png" alt="Global Maritime Freight" class="w-full">
         </section>
 
         <!-- About Us Section -->
@@ -211,7 +224,7 @@
 
         <!-- Visual Section: Ship 1 -->
         <section class="visual-section w-full">
-            <img src="https://nahushlogistic.com/cargo_ship.jpeg" alt="Sea Freight Cargo Ship" class="w-full object-cover max-h-[600px]">
+            <img src="https://nahushlogistic.com/cargo_ship.png" alt="Sea Freight Cargo Ship" class="w-full">
         </section>
 
         <!-- Services Section -->
@@ -283,50 +296,12 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Additional Support -->
-                <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    <div class="bg-[#041f3d] rounded-2xl md:rounded-[2rem] p-6 md:p-10 text-white shadow-xl">
-                        <h4 class="text-lg md:text-2xl font-bold mb-4 md:mb-6 flex items-center">
-                            <span class="w-6 h-6 md:w-8 md:h-8 bg-[#72b0b4] rounded flex items-center justify-center mr-3 text-[10px] md:text-sm">01</span>
-                            Premium Offering
-                        </h4>
-                        <div class="flex items-center p-4 md:p-6 bg-white/5 rounded-xl border border-white/10">
-                            <svg class="w-8 h-8 md:w-10 md:h-10 text-[#72b0b4] mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            <div>
-                                <span class="text-[#72b0b4] uppercase text-[9px] md:text-xs font-bold tracking-widest block mb-0.5">End-to-End</span>
-                                <span class="text-base md:text-xl font-bold">Door-to-Door Logistics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-10 shadow-lg border border-gray-100">
-                        <h4 class="text-lg md:text-2xl font-bold text-[#041f3d] mb-4 md:mb-6 flex items-center">
-                            <span class="w-6 h-6 md:w-8 md:h-8 bg-[#041f3d] text-white rounded flex items-center justify-center mr-3 text-[10px] md:text-sm">02</span>
-                            Support Services
-                        </h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100">
-                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-[11px] sm:text-sm font-semibold">Custom & Docs Handling</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100">
-                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-[11px] sm:text-sm font-semibold">DGFT Licensing</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 bg-gray-50 p-2.5 rounded-lg border border-gray-100 sm:col-span-2">
-                                <svg class="w-4 h-4 text-[#72b0b4] mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span class="text-[11px] sm:text-sm font-semibold">Port & CFS Coordination</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Visual Section: Airplane -->
         <section class="visual-section w-full">
-            <img src="https://nahushlogistic.com/airplane.jpeg" alt="Air Freight Cargo Airplane" class="w-full object-cover max-h-[600px]">
+            <img src="https://nahushlogistic.com/airplane.png" alt="Air Freight Cargo Airplane" class="w-full">
         </section>
 
         <!-- Partners Section -->
@@ -358,7 +333,7 @@
 
         <!-- Visual Section: Port -->
         <section class="visual-section w-full">
-            <img src="https://nahushlogistic.com/port.jpeg" alt="Port Logistics Hub" class="w-full object-cover max-h-[600px]">
+            <img src="https://nahushlogistic.com/port.png" alt="Port Logistics Hub" class="w-full">
         </section>
 
         <!-- Why Choose Us Section -->
@@ -377,25 +352,6 @@
                         <p class="text-sm md:text-xl text-gray-200 leading-relaxed text-center italic">
                             "We ensure fast customs clearance, smooth air & sea freight handling, accurate documentation, and on-time delivery—every time."
                         </p>
-                        
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 md:mt-12 pt-8 md:pt-12 border-t border-white/10">
-                            <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Fast</div>
-                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Clearance</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Smooth</div>
-                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Handling</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Accurate</div>
-                                <div class="text-[9px] uppercase tracking-widest text-gray-400">Docs</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-[#72b0b4] font-bold text-lg md:text-2xl mb-0.5 italic">Reliable</div>
-                                <div class="text-[9px] uppercase tracking-widest text-gray-400">On-Time</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -451,12 +407,6 @@
                                 </a>
                             </div>
                         </div>
-
-                        <!-- Email -->
-                        <div class="bg-[#041f3d] p-6 rounded-2xl text-white shadow-lg">
-                            <p class="text-xs uppercase tracking-widest text-[#72b0b4] font-bold mb-1">Email Support</p>
-                            <a href="mailto:contact@nahushlogistic.com" class="text-base md:text-lg font-bold hover:text-[#72b0b4] transition block">contact@nahushlogistic.com</a>
-                        </div>
                     </div>
 
                     <!-- Contact Form -->
@@ -473,15 +423,6 @@
                                 </div>
                             </div>
                             
-                            <div>
-                                <label class="block font-bold text-gray-700 mb-1.5 text-[11px] uppercase tracking-wide">Branch Interest</label>
-                                <select name="branch" class="w-full p-3.5 md:p-4 border border-gray-200 rounded-lg md:rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-sm md:text-base text-gray-800 transition bg-white">
-                                    <option value="General Inquiry">General Inquiry</option>
-                                    <option value="Mumbai Office">Mumbai Office</option>
-                                    <option value="Pune Office">Pune Office</option>
-                                </select>
-                            </div>
-
                             <div>
                                 <label class="block font-bold text-gray-700 mb-1.5 text-[11px] uppercase tracking-wide">Message</label>
                                 <textarea name="message" rows="4" class="w-full p-3.5 md:p-4 border border-gray-200 rounded-lg md:rounded-xl focus:ring-4 focus:ring-[#72b0b4]/20 focus:border-[#72b0b4] focus:outline-none text-sm md:text-base text-gray-800 transition" placeholder="Tell us about your requirements..." required></textarea>
@@ -509,10 +450,6 @@
                     <p class="text-xs md:text-sm leading-relaxed text-gray-400 max-w-sm mb-6">
                         NAHUSH LOGISTICS PVT. LTD. is a reliable service provider specializing in Customs House Agent (CHA) Services, Air & Sea Freight, and supply chain solutions.
                     </p>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-                        <p class="text-[10px] uppercase tracking-widest text-[#72b0b4] font-bold mb-1">Direct Contact</p>
-                        <a href="mailto:contact@nahushlogistic.com" class="text-sm md:text-base font-bold text-white hover:text-[#72b0b4] transition">contact@nahushlogistic.com</a>
-                    </div>
                 </div>
                 
                 <!-- Services Links -->
@@ -522,7 +459,6 @@
                         <li><a href="#services" class="hover:text-[#72b0b4] transition">Air Freight</a></li>
                         <li><a href="#services" class="hover:text-[#72b0b4] transition">Sea Freight</a></li>
                         <li><a href="#services" class="hover:text-[#72b0b4] transition">Customs Clearing</a></li>
-                        <li><a href="#contact-form-section" class="hover:text-[#72b0b4] transition">DGFT Support</a></li>
                     </ul>
                 </div>
 
@@ -536,7 +472,7 @@
                                 <strong class="text-white text-[11px] uppercase tracking-widest">Mumbai</strong>
                             </div>
                             <p class="text-[11px] md:text-xs text-gray-400 leading-relaxed">
-                                Sky lark building, 305, 3rd Floor, Plot No 63, Sector 11, Near by UCO Bank, CBD Belapur, Navi Mumbai: 400614
+                                Sky lark building, 305, 3rd Floor, Sector 11, CBD Belapur, Navi Mumbai: 400614
                             </p>
                         </div>
                         <div>
@@ -545,7 +481,7 @@
                                 <strong class="text-white text-[11px] uppercase tracking-widest">Pune</strong>
                             </div>
                             <p class="text-[11px] md:text-xs text-gray-400 leading-relaxed mb-2">
-                                Shop No G-15 Ground floor, Sacred World, Jagtap chowk, Wanawadi Pune-411040
+                                G-15, Sacred World, Jagtap chowk, Wanawadi Pune-411040
                             </p>
                         </div>
                     </div>
@@ -593,7 +529,7 @@
             new maplibregl.Marker({ color: '#72b0b4' })
                 .setLngLat(puneCoords)
                 .setPopup(new maplibregl.Popup({ offset: 25 })
-                .setHTML('<h3 class="font-bold text-[#041f3d]">Nahush Logistics - Pune</h3><p class="text-xs">Sacred World, Wanawadi</p>'))
+                .setHTML('<h3 class="font-bold text-[#041f3d]">NAHUSH LOGISTICS PVT. LTD. - Pune</h3><p class="text-xs">Sacred World, Wanawadi</p>'))
                 .addTo(map);
 
             // Mobile Menu logic

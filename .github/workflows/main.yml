@@ -16,7 +16,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ftp.nahushlogistic.com
+          username: sagar@nahushlogistic.com
+          password: narQum-qisbaq-qodvi4
           server-dir: ./public_html/  # The path on your server
